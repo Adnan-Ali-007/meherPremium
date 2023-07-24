@@ -3,13 +3,20 @@ import Navbar from "../components/Navbar";
 import Anouncemt from '../components/Anouncemt';
 import Slider from '../components/Slider';
 import Categories from '../components/Categories';
+import Products  from '../components/Products';
+import Newsletter from '../components/Newsletter';
+import Footer from '../components/Footer';
+import { Register } from './Register';
 const Home = () => {
   return (
     <div>
      <Anouncemt />
      <Navbar/>
      <Slider />
-     <Categories />
+     <Categories/>
+     <Products/>
+     <Newsletter/>
+     <Footer />
     </div>
   );
 };

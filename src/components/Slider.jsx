@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import {sliderItems} from "../data";
+import { mobile } from '../pages/Responsive';
 const Container = styled.div`
   width: 100%;
   height: 100vh; /* full screen slider */
@@ -9,6 +10,7 @@ const Container = styled.div`
   position: relative;
   background-color:white;
   overflow: hidden;
+  ${mobile({display:"none"})}
 `;
 const Arrow = styled.div`
   width: 50px;
@@ -93,7 +95,7 @@ setSlideIndex(slideIndex>0?slideIndex-1 :2);
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item)=>(
-        <Slide bg={item.bg}>
+        <Slide bg={item.bg} key={item.id}>
       <ImageContainer>
       <Image src={item.img}/>
       </ImageContainer>
